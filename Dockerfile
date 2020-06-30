@@ -5,7 +5,9 @@ WORKDIR /app
 
 # copy everything and build the project
 COPY src ./
-RUN dotnet publish dockerapi.csproj -c Release -o ./out --no-restore
+
+RUN dotnet test
+RUN dotnet publish dockerapi/dockerapi.csproj -c Release -o ./out --no-restore
 
 # build runtime image
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-alpine3.11
