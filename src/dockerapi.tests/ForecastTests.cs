@@ -28,7 +28,7 @@ namespace dockerapi.tests
         {
             var report = _weatherForecastController.Get();
 
-            Assert.AreEqual(5, report.Count());
+            Assert.AreEqual(50, report.Count());
         }
     }
 }
