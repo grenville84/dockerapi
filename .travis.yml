@@ -4,3 +4,15 @@ services:
 
 before_install:
   - docker build  .
+
+deploy:
+  provider: elasticbeanstalk
+  region: "eu-west-2"
+  app: "dockerapi"
+  env: "Dockerapi-env"
+  bucket_name: "elasticbeanstalk-eu-west-1-723910523754"
+  bucket_path: "dockerapi"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
