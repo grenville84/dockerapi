@@ -13,7 +13,7 @@ deploy:
   app: "dockerapi"
   env: "Dockerapi-env"
   bucket_name: "elasticbeanstalk-eu-west-1-723910523754"
-  bucket_path: "dockerapi"
+  bucket_path: "resources"
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
